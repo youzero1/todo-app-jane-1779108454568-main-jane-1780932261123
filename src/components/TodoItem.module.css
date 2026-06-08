@@ -101,8 +101,13 @@
   color: var(--color-text-muted);
 }
 
-.deleteBtn:hover {
+[data-theme='light'] .deleteBtn:hover {
   background: #fee2e2;
+  color: var(--color-danger);
+}
+
+[data-theme='dark'] .deleteBtn:hover {
+  background: #3b1212;
   color: var(--color-danger);
 }
 
@@ -110,8 +115,13 @@
   color: var(--color-text-muted);
 }
 
-.confirmBtn:hover {
+[data-theme='light'] .confirmBtn:hover {
   background: #dcfce7;
+  color: var(--color-success);
+}
+
+[data-theme='dark'] .confirmBtn:hover {
+  background: #052e16;
   color: var(--color-success);
 }
 
@@ -119,8 +129,13 @@
   color: var(--color-text-muted);
 }
 
-.cancelBtn:hover {
+[data-theme='light'] .cancelBtn:hover {
   background: #fee2e2;
+  color: var(--color-danger);
+}
+
+[data-theme='dark'] .cancelBtn:hover {
+  background: #3b1212;
   color: var(--color-danger);
 }
 

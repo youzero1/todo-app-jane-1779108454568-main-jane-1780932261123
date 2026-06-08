@@ -1,8 +1,10 @@
 import styles from './TodoPage.module.css';
 import { useTodos } from '@/hooks/useTodos';
+import { useTheme } from '@/hooks/useTheme';
 import TodoInput from '@/components/TodoInput';
 import TodoList from '@/components/TodoList';
 import TodoFooter from '@/components/TodoFooter';
+import ThemeToggle from '@/components/ThemeToggle';
 import { CheckSquare } from 'lucide-react';
 
 export default function TodoPage() {
@@ -21,6 +23,8 @@ export default function TodoPage() {
     completedCount,
   } = useTodos();
 
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <div className={styles.page}>
       <div className={styles.container}>
@@ -30,6 +34,9 @@ export default function TodoPage() {
           </div>
           <h1 className={styles.title}>My Todos</h1>
           <p className={styles.subtitle}>Stay organized, get things done.</p>
+          <div className={styles.themeToggle}>
+            <ThemeToggle theme={theme} onToggle={toggleTheme} />
+          </div>
         </header>
 
         <main className={styles.main}>

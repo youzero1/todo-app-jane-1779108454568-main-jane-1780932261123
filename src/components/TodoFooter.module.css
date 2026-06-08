@@ -60,7 +60,12 @@
   text-align: right;
 }
 
-.clearBtn:hover {
+[data-theme='light'] .clearBtn:hover {
   color: var(--color-danger);
   background: #fee2e2;
+}
+
+[data-theme='dark'] .clearBtn:hover {
+  color: var(--color-danger);
+  background: #3b1212;
 }
